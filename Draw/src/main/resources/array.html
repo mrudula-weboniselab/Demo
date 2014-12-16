@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="initial-scale=1.0, user-scalable=no">
+    <meta charset="utf-8">
+    <title>Polygon Arrays</title>
+    <style>
+        html, body, #map-canvas {
+        height: 100%;
+        margin: 0px;
+        padding: 0px
+        }
+    </style>
+    <script src="https://maps.googleapis.com/maps/api/js?v=3.exp"></script>
+    <script>
+// This example creates a simple polygon representing the Bermuda Triangle.
+// When the user clicks on the polygon an info window opens, showing
+// information about the polygon's coordinates.
+
+var map;
+var infoWindow;
+
+function initialize() {
+  var mapOptions = {
+    zoom: 5,
+    center: new google.maps.LatLng(24.886436490787712, -70.2685546875),
+    mapTypeId: google.maps.MapTypeId.TERRAIN
+  };
+
+  var bermudaTriangle;
+
+  map = new google.maps.Map(document.getElementById('map-canvas'),
+      mapOptions);
+
+  // Define the LatLng coordinates for the polygon.
+  var triangleCoords = [
+      new google.maps.LatLng(25.774252, -80.190262),
+      new google.maps.LatLng(18.466465, -66.118292),
+      new google.maps.LatLng(32.321384, -64.75737)
+  ];
+
+  // Construct the polygon.
+  bermudaTriangle = new google.maps.Polygon({
+    paths: triangleCoords,
+    strokeColor: '#FF0000',
+    strokeOpacity: 0.8,
+    strokeWeight: 3,
+    fillColor: '#FF0000',
+    fillOpacity: 0.35
+  });
+
+  bermudaTriangle.setMap(map);
+
+  // Add a listener for the click event.
+  google.maps.event.addListener(bermudaTriangle, 'click', showArrays);
+
+  infoWindow = new google.maps.InfoWindow();
+}
+
+/** @this {google.maps.Polygon} */
+function showArrays(event) {
+
+  // Since this polygon has only one path, we can call getPath()
+  // to return the MVCArray of LatLngs.
+  var vertices = this.getPath();
+
+    alert("Hello");
+
+  var minLat = vertices.getAt(0).lat(), minLng = vertices.getAt(0).lng(), maxLat= vertices.getAt(0).lat(), maxLng=vertices.getAt(0).lng();
+
+
+
+  // Iterate over the vertices to find north, south, east, west extremes.
+  for (var i =1; i < vertices.getLength(); i++) {
+
+    var xy = vertices.getAt(i);
+
+    //Check if current point falls into north extreme
+    if(xy.lat() >maxLat)
+        maxLat=xy.lat();
+    //Check if current point falls into south extreme
+    else if(xy.lat() <minLat)
+        minLat=xy.lat();
+
+    //Check if current point falls into east extreme
+    if(xy.lng()>maxLng)
+        maxLng=xy.lng();
+    //Check if current point falls into west extreme
+    else if(xy.lng()<minLng)
+        minLng=xy.lng();
+  }
+
+  // Define the LatLng coordinates for the polygon.
+  var boundingCoords = [
+      new google.maps.LatLng(maxLat,minLng),
+      new google.maps.LatLng(maxLat,maxLng),
+      new google.maps.LatLng(minLat, maxLng),
+      new google.maps.LatLng(minLat, minLng)
+  ];
+
+  // Construct the polygon.
+  var boundingQuadron = new google.maps.Polygon({
+    paths: boundingCoords,
+    strokeColor: '#FF0000',
+    strokeOpacity: 0.8,
+    strokeWeight: 3,
+    fillColor: '#FF0000',
+    fillOpacity: 0.35
+  });
+
+  boundingQuadron.setMap(map);
+
+}
+
+google.maps.event.addDomListener(window, 'load', initialize);
+
+    </script>
+</head>
+<body>
+<div id="map-canvas"></div>
+</body>
+</html>

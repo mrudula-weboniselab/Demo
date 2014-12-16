@@ -1,0 +1,90 @@
+
+<html>
+<head>
+    <script type="text/javascript" src="http://maps.google.com/maps/api/js?sensor=false"></script>
+    <script type="text/javascript">
+  var poly, map;
+  var markers = [];
+  var path = new google.maps.MVCArray;
+
+  function initialize() {
+    var uluru = new google.maps.LatLng(-25.344, 131.036);
+
+        map = new google.maps.Map(document.getElementById("map"), {
+      zoom: 14,
+      center: uluru,
+      mapTypeId: google.maps.MapTypeId.TERRAIN
+    });
+
+    poly = new google.maps.Polygon({
+      strokeWeight: 3,
+      fillColor: '#5555FF'
+    });
+    poly.setMap(map);
+    poly.setPaths(new google.maps.MVCArray([path]));
+
+    google.maps.event.addListener(map, 'click', addPoint);
+
+    google.maps.event.addListener(poly, 'click', showArrays);
+  }
+
+  function addPoint(event) {
+    path.insertAt(path.length, event.latLng);
+
+    var marker = new google.maps.Marker({
+      position: event.latLng,
+      map: map,
+      draggable: true
+    });
+    markers.push(marker);
+    marker.setTitle("#" + path.length);
+
+    google.maps.event.addListener(marker, 'click', function() {
+      marker.setMap(null);
+      for (var i = 0, I = markers.length; i < I && markers[i] != marker; ++i);
+      markers.splice(i, 1);
+      path.removeAt(i);
+      }
+    );
+
+    google.maps.event.addListener(marker, 'dragend', function() {
+      for (var i = 0, I = markers.length; i < I && markers[i] != marker; ++i);
+      path.setAt(i, marker.getPosition());
+      }
+    );
+
+
+
+
+  }
+function showArrays(event) {
+
+  // Since this polygon has only one path, we can call getPath()
+  // to return the MVCArray of LatLngs.
+ // var vertices = this.getPath();
+
+  var contentString = 'Clicked location: <br>' + event.latLng.lat() + ',' + event.latLng.lng() +
+      '<br>';
+
+  // Iterate over the vertices.
+  for (var i =0; i < path.getLength(); i++) {
+    var xy = path.getAt(i);
+    contentString += '<br>' + 'Coordinate ' + i + ':<br>' + xy.lat() + ',' +
+        xy.lng();
+  }
+
+  // Replace the info window's content and position.
+  infoWindow.setContent(contentString);
+  infoWindow.setPosition(event.latLng);
+
+  infoWindow.open(map);
+}
+
+
+</script>
+</head>
+<body style="margin:0px; padding:0px;" onload="initialize()">
+
+<div id="map" style="width: 680; height: 880;"></div>
+</body>
+</html>
