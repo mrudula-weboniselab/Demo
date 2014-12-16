@@ -1,0 +1,855 @@
+/* Application wide styles */
+
+@font-face {
+    font-family:"QuicksandBook-Regular";
+    src:url("../fonts/QuicksandBook-Regular/Quicksand_Book.eot?") format("eot"),
+        url("../fonts/QuicksandBook-Regular/Quicksand_Book.woff") format("woff"),
+        url("../fonts/QuicksandBook-Regular/Quicksand_Book.ttf") format("truetype"),
+        url("../fonts/QuicksandBook-Regular/Quicksand_Book.svg#QuicksandBook-Regular") format("svg");
+    font-weight:normal;
+    font-style:normal;
+}
+
+@font-face {
+    font-family: 'DroidSansRegular';
+    src: url('../fonts/droidsans/DroidSans-webfont.eot');
+    src: url('../fonts/droidsans/DroidSans-webfont.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/droidsans/DroidSans-webfont.woff') format('woff'),
+        url('../fonts/droidsans/DroidSans-webfont.ttf') format('truetype'),
+        url('../fonts/droidsans/DroidSans-webfont.svg#DroidSansRegular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+.bgContainer{
+    -fx-background-color:#f1f1f1;
+    -fx-alignment:top-left;
+    -fx-border-color:#d3d3d3;
+    -fx-border-style:solid;
+    -fx-border-width:0 0 1 0;
+}
+
+.bgContainerMiddle{
+    -fx-background-color:#FFFFFF;
+}
+
+.bgTop{
+    -fx-background-color:#bfbfbf;
+    -fx-alignment:center;
+}
+
+.background {
+    -fx-background-image: url("CoarseGrid.png");
+    -fx-background-repeat: repeat;
+	-fx-background-color:
+        linear-gradient(#38424b 0%, #1f2429 20%, #191d22 100%),
+        linear-gradient(#20262b, #191d22),
+        radial-gradient(center 50% 0%, radius 100%, rgba(114,131,148,0.9), rgba(255,255,255,0));
+}
+
+.header {
+    -fx-background-image: url("../images/new_Header_Logo.png");
+    -fx-background-repeat: no-repeat;
+    -fx-alignment:top-center;
+}
+
+.sdCard{
+    -fx-background-image: url("../images/sdCard.png");
+    -fx-background-repeat:no-repeat;
+    -fx-alignment:top-right;
+
+}
+
+.textHeadMain{
+    -fx-background: transparent;
+    -fx-font-family:'DroidSansRegular';
+    -fx-font-size: 30;
+    -fx-text-fill: #FFFFFF;
+}
+
+.textBold{
+    -fx-text-fill: #5c5c5c;
+    -fx-font-family:'DroidSansRegular';
+    -fx-font-size: 14;
+    -fx-font-weight: bold;
+}
+
+.labelRedLarge{
+    -fx-font-family:'QuicksandBook-Regular';
+    -fx-font-size: 14;
+    -fx-text-fill: #000000;
+}
+
+.labelRedLargeEx{
+    -fx-font-family:'DroidSansRegular';
+    -fx-font-size: 20;
+    -fx-text-fill: #c1262d;
+}
+
+.rightPanel SensorsSummaryRegion HBox{
+    -fx-padding:3 0 3 0;
+}
+
+.rightPanel SensorsSummaryRegion HBox Label{
+   	-fx-font-family:'DroidSansRegular';
+    -fx-font-size: 14;
+}
+
+SensorsSummaryRegion{
+    -fx-text-alignment:right;
+    -fx-text-fill:#F00;
+}
+
+GridPane Label,.textNormal{
+   	-fx-font-family:'DroidSansRegular';
+    -fx-font-size: 14;
+}
+
+.Label {
+    -fx-border-color:#e1e1e1;
+    -fx-border-style:solid;
+    -fx-border-width:0 1 0 0;
+    -fx-background-color:#f8f8f8;
+}
+
+.headerLabel {
+    -fx-font-family:'DroidSansRegular';
+    -fx-font-size: 15;
+    -fx-background:transparent;
+}
+
+Button {
+    -fx-font-family: 'QuicksandBold-Regular';
+    -fx-font-size: 12;
+}
+
+.headerLinks{
+    /*-fx-text-fill: #d3d3d3;*/
+    -fx-font-family:'
+
+
+    -Regular';
+    -fx-font-size: 16;
+}
+
+.headerLinks:hover {
+    -fx-text-fill: #c1262d;
+	-fx-underline: false;
+}
+.textSmall, .text-field.textSmall{
+    -fx-font-size: 11px;
+    -fx-font-family:'DroidSansRegular';
+}
+
+.textSmallRed{
+    -fx-font-size: 12;
+    -fx-font-family:'DroidSansRegular';
+    -fx-font-weight:bold;
+    -fx-text-fill:#c1262d;
+}
+
+.text-field{
+	-fx-font-size: 16;
+    -fx-background-insets: 0 0 -1 0, 0, 1.5;
+    -fx-background-radius: 3, 3, 3;
+    -fx-effect: innershadow( gaussian, rgb(0, 0, 0, 0.2), 5, 0, 0, 2 );
+    -fx-font-family:'QuicksandBook-Regular';
+}
+
+.planTF{
+   -fx-background-color:transparent;
+   -fx-font-family:'QuicksandBook-Regular';
+   -fx-font-size: 18;
+   -fx-text-fill: #000000;
+   -fx-z-index:1000;
+   -fx-visibility: true;
+}
+
+.goRight{
+   -fx-alignment: top-right;
+}
+
+.goLeft{
+   -fx-alignment: top-left;
+}
+
+.buttonAdd{
+    -fx-background-color:
+       	rgb(255, 255, 255, 0.08),
+       	rgb(0, 0, 0, 0.8),
+           #090a0c,
+           linear-gradient(#4a5661 0%, #1f2429 20%, #1f242a 100%),
+           linear-gradient(#242a2e, #23282e),
+           radial-gradient(center 50% 0%, radius 100%, rgba(135,142,148,0.9),
+           rgba(255,255,255,0));
+       -fx-background-radius: 5, 4, 3, 2, 2, 3;
+       -fx-font-family:'DroidSansRegular';
+       -fx-text-fill: white;
+       -fx-font-size: 14;
+       -fx-text-fill: linear-gradient(white, #FFFFFF);
+       -fx-padding: 3 15 3 15;
+       -fx-font-weight:bold;
+       -fx-cursor:hand;
+}
+
+.buttonAdd:hover {
+    -fx-background-color:
+    	rgb(255, 255, 255, 0.08),
+    	rgb(0, 0, 0, 0.8),
+        #090a0c,
+        linear-gradient(#4a5661 0%, #1f2429 20%, #1f242a 100%),
+        linear-gradient(#3f4950, #23282e),
+        radial-gradient(center 50% 0%, radius 100%, rgba(135,142,148,0.9),
+        rgba(255,255,255,0));
+}
+
+.activity {
+    -fx-background-color:
+       	rgb(255, 255, 255, 0.08),
+       	rgb(0, 0, 0, 0.8),
+           #c1262d,
+           linear-gradient(#c1262d 0%, #c1262d 20%, #c1262d 100%),
+           linear-gradient(#c1262d, #c1262d),
+           radial-gradient(center 50% 0%, radius 100%, rgba(193,38,45,0.9),
+           rgba(145,10,16,0.5));
+    -fx-background-radius: 7, 6, 5, 4, 3, 5;
+   	-fx-font-family:'DroidSansRegular';
+    -fx-text-fill: white;
+    -fx-font-size: 16;
+    -fx-font-weight:bold;
+    -fx-text-fill: linear-gradient(white, #FFFFFF);
+    -fx-padding: 10 15 10 15;
+    -fx-cursor:hand;
+}
+
+.activity:focused, .activity:hover {
+    -fx-background-color:
+    	rgb(255, 255, 255, 0.08),
+    	rgb(0, 0, 0, 0.8),
+        #090a0c,
+        linear-gradient(#4a5661 0%, #1f2429 20%, #1f242a 100%),
+        linear-gradient(#3f4950, #23282e),
+        radial-gradient(center 50% 0%, radius 100%, rgba(135,142,148,0.9),
+        rgba(255,255,255,0));
+}
+
+
+#active {
+    -fx-background-color:#363636;
+    -fx-text-fill: #ffffff;
+}
+
+.buttonBlank{
+    -fx-font-family:'DroidSansRegular';
+    -fx-text-fill: #000000;
+    -fx-font-size: 16;
+    -fx-graphic: url("../images/newPlanButton1.png") no-repeat ;
+    -fx-background-color: transparent;
+}
+
+.buttonBlank:hover{
+    -fx-graphic: url("../images/newPlanButton1_hover.png") no-repeat ;
+}
+
+.editButton{
+    -fx-graphic: url("../images/newEdit.png") no-repeat ;
+    -fx-background-color: transparent;
+    -fx-cursor: hand;
+}
+
+.duplicateButton{
+    -fx-graphic: url("../images/newDuplicate.png") no-repeat ;
+    -fx-background-color: transparent;
+    -fx-cursor: hand;
+}
+
+.deleteButton{
+    -fx-graphic: url("../images/newDelete.png") no-repeat ;
+    -fx-background-color: transparent;
+    -fx-cursor: hand;
+}
+
+.iconExpandButton{
+    -fx-graphic: url("../images/iconExpand.png") no-repeat ;
+    -fx-background-color: transparent;
+    -fx-alignment:top-right;
+    -fx-cursor: hand;
+}
+
+.leftPanel{
+    -fx-border-color:#7399a8;
+    -fx-border-style:solid;
+    -fx-border-width:0 1 0 0;
+    -fx-background-image:url("../images/bgLeft.jpg");
+    -fx-background-position: right;
+    -fx-background-repeat: repeat-Y;
+}
+
+.rightPanel{
+    -fx-background-image:url("../images/bgRight.jpg");
+    -fx-background-repeat: repeat-Y;
+}
+
+.rightHeader{
+    -fx-background-image:url("../images/bgFlightPlanSmry.png");
+    -fx-background-repeat: repeat-Y;
+    -fx-background-color:#bfbfbf;
+}
+
+.newPlanHeader{
+    -fx-background-image:url("../images/bgNewPlan.png");
+    -fx-background-position: right;
+    -fx-background-repeat: repeat-Y;
+    -fx-background-color:#bfbfbf;
+}
+
+.newPlanHeaderBg{
+    -fx-background-repeat: repeat-Y;
+    -fx-background-color:#bfbfbf;
+}
+
+TableView, TableView column{
+    -fx-font-family:'DroidSansRegular';
+    -fx-font-size: 14;
+    -fx-background:transparent;
+}
+
+.flight-plan-controls-container {
+    -fx-border-color:#7399a8;
+    -fx-border-style:solid;
+    -fx-border-width:0 1 0 0;
+}
+
+.map{
+    -fx-background:transparent;
+    -fx-z-index:0;
+}
+
+.listAdder{
+    -fx-background:transparent;
+}
+
+.bottomPlanName{
+    -fx-padding:-60 770 0 0;
+    -fx-font-family:'DroidSansRegular';
+    -fx-font-size: 30;
+    -fx-text-fill: #FFFFFF;
+    -fx-z-index:1000;
+    -fx-visibility: true;
+    -fx-alignment:top-left;
+
+}
+
+.google-maps-region {
+    -fx-margin: 50;
+    -fx-padding: 100 0 0 100;
+    -fx-border-width: 3;
+    -fx-border-color: blue;
+    -fx-z-index:0;
+}
+
+.google-maps-webview {
+    -fx-border-width: 3;
+    -fx-border-color: red;
+}
+
+.slider .thumb {
+    -fx-background-image :url("../images/slider_thumb_icon.png");
+    -fx-background-repeat: no-repeat;
+    -fx-padding: 10;
+    -fx-background-color:transparent;
+    -fx-cursor: hand;
+}
+
+.mylistview{
+    -fx-font-family:'DroidSansRegular';
+    -fx-font-size: 15;
+    -fx-background:transparent;
+    -fx-background-insets: 0 ;
+}
+
+.mylistview .list-cell {
+    -fx-background-color:#f8f8f8;
+    -fx-border-color:#dedede;
+    -fx-border-width:0 1 1 0;
+    -fx-border-style:solid;
+    -fx-padding: 5px;
+    -fx-text-fill:#979797;
+    -fx-text-size:14px;
+    -fx-text-alignment:center;
+    -fx-font-family: 'QuicksandBold-Regular';
+    -fx-size:48px;
+    -fx-padding:17 0 17 30;
+ }
+
+.mylistview .list-cell:selected {
+      -fx-text-fill: #c1272d;
+      -fx-background-color:#ffffff;
+      -fx-border-color:#dedede;
+      -fx-border-width:0 0 1 0;
+      -fx-border-style:solid;
+}
+
+.mylistview .list-view:focused .list-cell:filled:focused:selected {
+    -fx-text-fill: #c1272d;
+    -fx-background-color:#ffffff;
+    -fx-border-color:#dedede;
+    -fx-border-width:0 0 1 0;
+    -fx-border-style:solid;
+}
+
+.mylistview .list-cell:empty {
+    -fx-background-color:#f8f8f8;
+    -fx-border-color:#dedede;
+    -fx-border-width:0 1 0 0;
+    -fx-border-style:solid;
+}
+
+.list-view:focused {
+    -fx-focused-color:transparent;
+}
+
+.mylistview .list-view:focused {
+    -fx-focused-color:transparent;
+}
+
+.mylistview .scroll-bar:horizontal .track,
+.mylistview .scroll-bar:vertical .track{
+     -fx-background-color:transparent;
+     -fx-border-color:transparent;
+     -fx-background-radius: 0em;
+     -fx-border-radius:2em;
+}
+
+.mylistview .scroll-bar:horizontal .increment-button ,
+.mylistview .scroll-bar:horizontal .decrement-button {
+     -fx-background-color:transparent;
+     -fx-background-radius: 0em;
+     -fx-padding:0 0 10 0;
+}
+
+.mylistview .scroll-bar:vertical .increment-button ,
+.mylistview .scroll-bar:vertical .decrement-button {
+     -fx-background-color:transparent;
+     -fx-background-radius: 0em;
+     -fx-padding:0 10 0 0;
+}
+
+.mylistview  .scroll-bar .increment-arrow,
+.mylistview  .scroll-bar .decrement-arrow, {
+     -fx-shape: " ";
+     -fx-padding:0;
+}
+
+.mylistview .scroll-bar:horizontal .thumb,
+.mylistview .scroll-bar:vertical .thumb {
+    -fx-background-color:derive(black,90%);
+    -fx-background-insets: 2, 0, 0;
+    -fx-background-radius: 2em;
+}
+
+.surveyNameList {
+    -fx-background-color:#f8f8f8;
+    -fx-border-width:0 1 0 0;
+    -fx-border-style:solid;
+    -fx-border-color:#dedede;
+}
+
+.newRedButton {
+    -fx-padding: 4 0 2 0;
+    -fx-background-color: #c1272d;
+    -fx-background-radius: 3px;
+    -fx-font-family:'QuicksandBold-Regular';
+    -fx-font-size: 14;
+    -fx-text-fill: #ffffff;
+}
+
+.newWhiteButton {
+    -fx-background-color: #ffffff;
+    -fx-font-family:'QuicksandBook-Regular';
+    -fx-font-size: 14;
+    -fx-text-fill: #999999;
+    -fx-text-alignment:center;
+    -fx-border-width:1 1 1 1;
+    -fx-border-style:solid;
+    -fx-border-color:#dedede;
+    -fx-underline: false;
+    -fx-text-alignment: center;
+}
+
+.newGrayButton {
+    -fx-font-family:'QuicksandBook-Regular';
+    -fx-font-size: 14;
+    -fx-text-alignment:center;
+    -fx-border-width:1 1 1 1;
+    -fx-border-style:solid;
+    -fx-border-color:#dedede;
+    -fx-underline: false;
+    -fx-background-color:#363636;
+    -fx-text-fill: #ffffff;
+}
+
+.addButtonIcon {
+    -fx-graphic: url("../images/addPlanIcon.png");
+}
+
+.border {
+    -fx-background-color:#d3d3d3;
+}
+
+.split-pane *.horizontal-grabber {
+    -fx-background-color: transparent;
+}
+
+.split-pane *.vertical-grabber {
+    -fx-background-color: transparent;
+}
+
+.split-pane:horizontal > * > .split-pane-divider {
+    -fx-border-color: transparent;
+    -fx-background-color: transparent;
+}
+
+.split-pane:vertical > * > .split-pane-divider {
+    -fx-border-color: transparent;
+    -fx-background-color: transparent;
+}
+
+.accordion .titled-pane .title {
+    -fx-background-color:#f1f1f1;
+    -fx-fill-color:#6d6d6d;
+    -fx-font-family:'QuicksandBook-Regular';
+    -fx-font-size: 16;
+    -fx-border-width:1 1 1 1;
+    -fx-border-style:solid;
+    -fx-border-color:#e1e1e1;
+    -fx-padding: 10 0 10 10;
+}
+
+.accordion .titled-pane .title .arrow{
+     -fx-background-image :url("../images/expandArrow.png");
+     -fx-background-repeat: no-repeat;
+     -fx-padding: 10;
+     -fx-background-color:transparent;
+     -fx-cursor: hand;
+}
+
+.accordion .titled-pane:focused {
+    -fx-text-fill:#6d6d6d;
+}
+
+.accordion {
+    -fx-background-color:#ffffff;
+}
+
+.summaryPane {
+    -fx-border-width:1 1 1 1;
+    -fx-border-style:solid;
+    -fx-border-color:#8e8e8e;
+}
+
+.coverageAreaBorder {
+    -fx-border-width:0 0 1 0;
+    -fx-border-style:solid;
+    -fx-border-color:#e1e1e1;
+}
+
+.fpSummaryTitles {
+    -fx-font-family:"QuicksandBold";
+    -fx-font-size:12;
+    -fx-font-color:#000000;
+    -fx-font-weight:bold;
+}
+
+.fpSummaryTitleBox {
+    -fx-background-color: #f1f1f1;
+}
+
+.fpSummaryTitleText {
+    -fx-padding: 10 0 10 20;
+}
+
+
+.fpSummaryContent {
+    -fx-background-color: #ffffff;
+}
+
+.flightCoverageLabelContainer {
+    -fx-background-color: #ffffff;
+}
+
+.fpSummaryCloseBtn {
+    -fx-graphic: url("../images/closeBtnIcon.png");
+    -fx-alignment:top-right;
+    -fx-padding: 10 0 10 0;
+}
+
+.fpCoverageAreaText {
+    -fx-text-fill: #c1272d;
+    -fx-font-family:"QuicksandBold";
+    -fx-font-size:12;
+    -fx-font-weight:bold;
+}
+
+.sensorSummeryDetails {
+    -fx-text-fill:#a3a3a3;
+    -fx-text-size:12px;
+    -fx-text-alignment:center;
+    -fx-font-family: 'QuicksandBold-Regular';
+}
+
+.sensorSummeryList {
+    -fx-text-fill:#000000;
+    -fx-text-size:12px;
+    -fx-text-alignment:center;
+    -fx-font-family: 'QuicksandBold-Regular';
+    -fx-background-insets:0;
+}
+
+
+.sensorSummeryList .list-cell {
+    -fx-background-color:#ffffff;
+    -fx-text-fill:#000000;
+ }
+
+.sensorSummeryList .list-view:focused {
+    -fx-focused-color:transparent;
+}
+
+.sensorSummeryList .mylistview .list-view:focused {
+    -fx-focused-color:transparent;
+}
+
+ListView.sensorSummeryList{
+    -fx-text-fill:#ff0000;
+    -fx-background-color: #fff;
+    -fx-border-width: 0;
+}
+
+.sensorSummeryList .scroll-bar:horizontal .track-background,
+.sensorSummeryList .scroll-bar:vertical .track-background {
+    -fx-background-color:transparent;
+    -fx-border-color:transparent;
+}
+
+.sensorSummeryList .scroll-bar:horizontal .track,
+.sensorSummeryList .scroll-bar:vertical .track{
+       -fx-background-color:transparent;
+        -fx-border-color:transparent;
+        -fx-background-insets: 2, 0, 0;
+ }
+
+.sensorSummeryList .scroll-bar:vertical .increment-button ,
+.sensorSummeryList .scroll-bar:vertical .decrement-button {
+    -fx-background-color:transparent;
+    -fx-background-radius: 0em;
+    -fx-padding:0 10 0 0;
+}
+
+.sensorSummeryList  .scroll-bar .increment-arrow,
+.sensorSummeryList  .scroll-bar .decrement-arrow, {
+    -fx-shape: " ";
+    -fx-padding:0;
+}
+
+.sensorSummeryList .scroll-bar:horizontal .increment-arrow,
+.sensorSummeryList .scroll-bar:horizontal .decrement-arrow,
+.sensorSummeryList .scroll-bar:horizontal .increment-button,
+.sensorSummeryList .scroll-bar:horizontal .decrement-button {
+    -fx-padding:0;
+}
+
+.sensorSummeryList .scroll-bar:horizontal .thumb,
+.sensorSummeryList .scroll-bar:vertical .thumb {
+    -fx-background-color:derive(black,90%);
+    -fx-background-insets: 2, 0, 0;
+    -fx-background-radius: 2em;
+}
+
+.sensorSummeryList .scroll-bar:horizontal,
+.sensorSummeryList .scroll-bar:vertical {
+    -fx-background-color: transparent;
+}
+
+.splitPane {
+    -fx-box-border: transparent;
+}
+
+.thumbnailBox {
+    -fx-background-image: url("../images/thumbnail.png");
+    -fx-background-repeat:no-repeat;
+    -fx-alignment: top-center;
+}
+
+.flightPlannerMsgBox {
+    -fx-padding: 38,0,0,33;
+}
+
+.flightPlannerMsg {
+    -fx-font-family:'QuicksandBook';
+    -fx-font-size: 18;
+    -fx-text-fill: #777;
+    -fx-alignment: center;
+}
+
+.root {
+    -fx-focus-color: transparent;
+}
+
+.splashScreen{
+    -fx-background-image: url("../images/splashImage.png");
+    -fx-background-color: transparent;
+    -fx-background-repeat:no-repeat;
+    -fx-padding: 10 10 10 10;
+    -fx-background-position: center;
+}
+
+.versionNumberBox {
+    -fx-padding: 388 0 0 0;
+}
+
+.version{
+    -fx-text-fill:#fff;
+    -fx-font-family:'QuicksandBook-Regular';
+    -fx-font-size: 16;
+}
+
+.accordionScrollPane {
+    -fx-background-color: transparent;
+}
+
+.accordionScrollPane:focused {
+    -fx-background-color: transparent;
+    -fx-background-insets: -1.4, 0, 1;
+}
+
+.accordionScrollPane .scroll-pane {
+    -fx-background-color: transparent;
+}
+
+.accordionScrollPane .scroll-bar .increment-button {
+    -fx-background-color: transparent;
+    -fx-padding: 0 0 0 0;
+}
+
+.accordionScrollPane .scroll-bar .decrement-button {
+    -fx-background-color: transparent;
+    -fx-padding: 0 0 0 0;
+}
+
+.accordionScrollPane .scroll-bar:vertical {
+    -fx-background-color: transparent;
+}
+
+.accordionScrollPane .scroll-bar:vertical .track-background {
+    -fx-background-color:transparent;
+    -fx-border-color:transparent;
+}
+
+.accordionScrollPane .scroll-bar:vertical .track {
+    -fx-background-color:transparent;
+    -fx-border-color:transparent;
+    -fx-background-insets: 2, 0, 0;
+}
+
+.accordionScrollPane > * > .scroll-bar:vertical .thumb {
+    -fx-background-color:derive(black,90%);
+    -fx-background-insets: 2, 0, 0;
+    -fx-background-radius: 1em;
+}
+.bgWhite{
+    -fx-background-color: #fff;
+    -fx-border-width: 0;
+}
+.table-view{
+    -fx-border-color: #ccc;
+}
+.noPadding{
+    -fx-padding: 0;
+}
+
+#missionsExistRegion {
+    -fx-min-height: 430;
+    -fx-max-width: 635;
+    -fx-pref-height: 450;
+}
+
+.midHeader {
+    -fx-border-width: 0 0 1 0;
+    -fx-border-color: #d3d3d3;
+}
+.exclamation {
+    -fx-background-image: url("../images/icon_exclamation.png");
+    -fx-background-repeat: no-repeat;
+    -fx-padding: 15;
+}
+.noConnectionText{
+    -fx-text-fill:#222;
+    /*-fx-font-family:'QuicksandBold-Regular';*/
+    -fx-font-size: 18;
+}
+.lineBreakStyle{
+    -fx-padding: 0;
+    -fx-border-color: #d3d3d3;
+}
+
+.toggle-switch{
+    -fx-background-image: url("../images/icon-switch.jpg");
+    -fx-background-repeat: no-repeat;
+}
+
+.inputs-font-size{
+    -fx-font-size: 10;
+}
+
+
+.maskTextFieldBorder{
+    -fx-background-color: transparent;
+    -fx-border: 0px solid;
+}
+
+.linkStyle{
+    -fx-underline: false;
+    -fx-font-size: 10;
+}
+
+.linkStyle:hover{
+    -fx-underline: false;
+    -fx-text-fill: #000000;
+}
+
+.linkStyle:visited{
+    -fx-underline: false;
+    -fx-text-fill: #000000;
+}
+
+
+/*
+CSS Code for Coverage Overlap Config
+*/
+
+.coverageConfigTitleBox {
+    -fx-background-color: #f1f1f1;
+}
+
+.coverageConfigDialogPane {
+    -fx-border-width:1 1 1 1;
+    -fx-border-style:solid;
+    -fx-border-color:#8e8e8e;
+}
+
+.coverageOverlapConfigHeadingText {
+    -fx-font-family:"QuicksandBold";
+    -fx-font-size:15;
+    -fx-font-color:#000000;
+    -fx-padding: 30 0 10 100;
+}
+
+.coverageConfigDialogCloseButton {
+    -fx-graphic: url("../images/closeBtnIcon.png");
+    -fx-alignment:top-right;
+}
+
+.coverageConfigDesc{
+    -fx-font-size:14;
+}

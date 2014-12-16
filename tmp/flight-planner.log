@@ -1,0 +1,185 @@
+ 15:30:42,522 - JavaFX-Launcher INFO  FontUtils - Loaded font: RBNo2-Light
+ 15:30:42,524 - JavaFX-Launcher INFO  FontUtils - Loaded font: RBNo2-Light-Alternative
+ 15:30:42,525 - JavaFX-Launcher INFO  FontUtils - Loaded font: QuicksandBold-Regular
+ 15:30:42,569 - JavaFX Application Thread INFO  FlightPlannerApp - Starting PrecisionHawk Flight Planner
+ 15:30:44,921 - JavaFX Application Thread INFO  GoogleMapsRegion - Setting java bridge on GoogleMapsRegion
+ 15:30:44,934 - JavaFX Application Thread INFO  FlightPlannerController - Prompting user to identify the SD card mount location...
+ 15:30:44,956 - JavaFX Application Thread INFO  ApplicationUpdateUtils - LatestVersion: 1.0, RunningVersion: 1.0-SNAPSHOT
+ 15:30:44,957 - JavaFX Application Thread INFO  FlightPlannerController - Running latest version: 1.0-SNAPSHOT
+ 15:30:45,156 - JavaFX Application Thread DEBUG AddressTextField - Focusing lost from address text field
+ 15:30:45,540 - JavaFX Application Thread DEBUG GoogleMapsRegion - Setting java bridge on WebView
+ 15:30:45,542 - JavaFX Application Thread INFO  GoogleMapsJavaBridge - [JavaBridge] - Java bridge established. Initializing maps view.
+ 15:30:45,543 - JavaFX Application Thread INFO  GoogleMapsJavaBridge - [JavaBridge] - Initializing Google Maps interface
+ 15:30:45,553 - JavaFX Application Thread INFO  GoogleMapsJavaBridge - [JavaBridge] - Resetting waypoints shape
+ 15:30:45,553 - JavaFX Application Thread INFO  GoogleMapsJavaBridge - [JavaBridge] - Setting waypointsShape to Polygon
+ 15:30:45,556 - JavaFX Application Thread INFO  GoogleMapsJavaBridge - [JavaBridge] - zoomToFitMission()
+ 15:30:45,557 - JavaFX Application Thread INFO  GoogleMapsJavaBridge - [JavaBridge] - Google Maps interface initialization complete
+ 15:30:48,560 - JavaFX Application Thread INFO  FlightPlannerController - Windows Machine Drive: 
+ 15:30:48,561 - JavaFX Application Thread INFO  FlightPlannerController - C:\
+ 15:30:48,561 - JavaFX Application Thread INFO  FlightPlannerController - D:\
+ 15:30:48,573 - JavaFX Application Thread DEBUG AddressTextField - Focusing lost from address text field
+ 15:30:51,595 - JavaFX Application Thread DEBUG AddressTextField - Focusing lost from address text field
+ 15:30:53,403 - JavaFX Application Thread DEBUG FlightPlannerController - No SD card selected by user
+ 15:30:53,403 - JavaFX Application Thread WARN  FlightPlannerController - No SD card is configured. Application cannot launch without SD card configured
+ 15:30:53,403 - JavaFX Application Thread INFO  FlightPlannerController - Prompting user to identify the SD card mount location...
+ 15:30:53,430 - JavaFX Application Thread DEBUG AddressTextField - Focusing lost from address text field
+ 15:31:02,690 - JavaFX Application Thread INFO  FlightPlannerController - Windows Machine Drive: 
+ 15:31:02,690 - JavaFX Application Thread INFO  FlightPlannerController - C:\
+ 15:31:02,700 - JavaFX Application Thread INFO  FlightPlannerController - D:\
+ 15:31:02,704 - JavaFX Application Thread DEBUG AddressTextField - Focusing lost from address text field
+ 15:31:05,250 - JavaFX Application Thread INFO  FlightPlannerController - usbDriveName: C:\
+ 15:31:05,251 - JavaFX Application Thread INFO  FlightPlannerController - Path = C:\
+ 15:31:05,276 - JavaFX Application Thread DEBUG AddressTextField - Focusing lost from address text field
+ 15:31:07,297 - JavaFX Application Thread INFO  FlightPlannerController - Windows Machine Drive: 
+ 15:31:07,298 - JavaFX Application Thread INFO  FlightPlannerController - C:\
+ 15:31:07,298 - JavaFX Application Thread INFO  FlightPlannerController - D:\
+ 15:31:07,301 - JavaFX Application Thread DEBUG AddressTextField - Focusing lost from address text field
+ 15:31:09,569 - JavaFX Application Thread INFO  FlightPlannerController - usbDriveName: D:\
+ 15:31:09,570 - JavaFX Application Thread INFO  FlightPlannerController - Path = D:\
+ 15:31:09,571 - JavaFX Application Thread INFO  FlightPlannerController - Read write access
+ 15:31:09,801 - JavaFX Application Thread DEBUG SensorsSummaryRegion - resetLabels()
+ 15:31:09,802 - JavaFX Application Thread DEBUG SensorsSummaryRegion - Sensor count: 2 
+ 15:31:09,803 - JavaFX Application Thread INFO  FlightPlannerController - Selecting mission: Untitled
+ 15:31:09,803 - JavaFX Application Thread INFO  FlightPlannerController - Reading mission from disk: Untitled
+ 15:31:09,803 - JavaFX Application Thread INFO  FlightPlannerController - Reading mission from disk: Untitled
+ 15:31:09,844 - JavaFX Application Thread DEBUG FlightPlannerRegion - Handling selected waypoint update in FlightPlannerRegion
+ 15:31:09,844 - JavaFX Application Thread DEBUG GoogleMapsJavaBridge - Handling selected waypoint update in GoogleMapsJavaBridge
+ 15:31:09,870 - JavaFX Application Thread DEBUG FlightPlannerController - Handling mission config update in FlightPlannerController
+ 15:31:09,871 - JavaFX Application Thread DEBUG FlightPlannerRegion - Handling mission config update in FlightPlannerRegion
+ 15:31:09,884 - JavaFX Application Thread INFO  FlightPlannerRegion - isValueChanging: false
+ 15:31:09,884 - JavaFX Application Thread DEBUG SensorsSummaryRegion - Handling mission config update in SensorSummaryRegion
+ 15:31:09,884 - JavaFX Application Thread DEBUG SensorsSummaryRegion - resetLabels()
+ 15:31:09,885 - JavaFX Application Thread DEBUG SensorsSummaryRegion - Sensor count: 2 
+ 15:31:09,886 - JavaFX Application Thread DEBUG GoogleMapsJavaBridge - Handling mission config update in GoogleMapsJavaBridge
+ 15:31:09,924 - JavaFX Application Thread DEBUG GoogleMapsJavaBridge - [JavaBridge] - syncMissionFromJava()
+ 15:31:09,924 - JavaFX Application Thread INFO  GoogleMapsJavaBridge - [JavaBridge] - pauseWaypointsSync()
+ 15:31:09,950 - JavaFX Application Thread DEBUG GoogleMapsJavaBridge - [JavaBridge] - SurveyMode: BOUNDED
+ 15:31:09,951 - JavaFX Application Thread INFO  GoogleMapsJavaBridge - [JavaBridge] - resumeWaypointsSync()
+ 15:31:09,951 - JavaFX Application Thread INFO  GoogleMapsJavaBridge - sync type terrain 
+ 15:31:09,951 - JavaFX Application Thread INFO  GoogleMapsJavaBridge - [JavaBridge] - syncMapTypeToWeb() = terrain
+ 15:31:09,952 - JavaFX Application Thread INFO  GoogleMapsJavaBridge - [JavaBridge] - map type id = terrain
+ 15:31:09,952 - JavaFX Application Thread INFO  GoogleMapsJavaBridge - type terrain 
+ 15:31:09,958 - JavaFX Application Thread INFO  GoogleMapsJavaBridge - config type terrain 
+ 15:31:13,344 - JavaFX Application Thread DEBUG AddressTextField - Focusing lost from address text field
+ 15:31:13,458 - JavaFX Application Thread DEBUG ApplicationState - ApplicationState::commitChanges()
+ 15:31:13,459 - JavaFX Application Thread INFO  Mission - updateMissionConfig()
+ 15:31:13,493 - JavaFX Application Thread DEBUG FlightPlannerController - Handling mission config update in FlightPlannerController
+ 15:31:13,493 - JavaFX Application Thread DEBUG FlightPlannerRegion - Handling mission config update in FlightPlannerRegion
+ 15:31:13,494 - JavaFX Application Thread DEBUG SensorsSummaryRegion - Handling mission config update in SensorSummaryRegion
+ 15:31:13,494 - JavaFX Application Thread DEBUG SensorsSummaryRegion - resetLabels()
+ 15:31:13,495 - JavaFX Application Thread DEBUG SensorsSummaryRegion - Sensor count: 2 
+ 15:31:13,496 - JavaFX Application Thread DEBUG GoogleMapsJavaBridge - Handling mission config update in GoogleMapsJavaBridge
+ 15:31:13,566 - JavaFX Application Thread DEBUG GoogleMapsJavaBridge - [JavaBridge] - syncMissionFromJava()
+ 15:31:13,567 - JavaFX Application Thread INFO  GoogleMapsJavaBridge - [JavaBridge] - pauseWaypointsSync()
+ 15:31:13,577 - JavaFX Application Thread DEBUG GoogleMapsJavaBridge - [JavaBridge] - SurveyMode: BOUNDED
+ 15:31:13,578 - JavaFX Application Thread INFO  GoogleMapsJavaBridge - [JavaBridge] - resumeWaypointsSync()
+ 15:31:13,578 - JavaFX Application Thread INFO  GoogleMapsJavaBridge - sync type terrain 
+ 15:31:13,578 - JavaFX Application Thread INFO  GoogleMapsJavaBridge - [JavaBridge] - syncMapTypeToWeb() = terrain
+ 15:31:13,580 - JavaFX Application Thread INFO  GoogleMapsJavaBridge - [JavaBridge] - map type id = terrain
+ 15:31:13,580 - JavaFX Application Thread INFO  GoogleMapsJavaBridge - type terrain 
+ 15:31:13,585 - JavaFX Application Thread INFO  GoogleMapsJavaBridge - config type terrain 
+ 15:31:17,497 - JavaFX Application Thread DEBUG ApplicationState - ApplicationState::commitChanges()
+ 15:31:17,497 - JavaFX Application Thread INFO  Mission - updateMissionConfig() called with identical MissionConfig
+ 15:31:17,497 - JavaFX Application Thread DEBUG FlightPlannerController - Handling mission config update in FlightPlannerController
+ 15:31:17,497 - JavaFX Application Thread DEBUG FlightPlannerRegion - Handling mission config update in FlightPlannerRegion
+ 15:31:17,497 - JavaFX Application Thread DEBUG SensorsSummaryRegion - Handling mission config update in SensorSummaryRegion
+ 15:31:17,497 - JavaFX Application Thread DEBUG SensorsSummaryRegion - resetLabels()
+ 15:31:17,498 - JavaFX Application Thread DEBUG SensorsSummaryRegion - Sensor count: 2 
+ 15:31:17,499 - JavaFX Application Thread DEBUG GoogleMapsJavaBridge - Handling mission config update in GoogleMapsJavaBridge
+ 15:31:17,499 - JavaFX Application Thread DEBUG GoogleMapsJavaBridge - [JavaBridge] - syncMissionFromJava()
+ 15:31:17,499 - JavaFX Application Thread INFO  GoogleMapsJavaBridge - [JavaBridge] - pauseWaypointsSync()
+ 15:31:17,503 - JavaFX Application Thread DEBUG GoogleMapsJavaBridge - [JavaBridge] - SurveyMode: BOUNDED
+ 15:31:17,503 - JavaFX Application Thread INFO  GoogleMapsJavaBridge - [JavaBridge] - resumeWaypointsSync()
+ 15:31:17,503 - JavaFX Application Thread INFO  GoogleMapsJavaBridge - sync type terrain 
+ 15:31:17,504 - JavaFX Application Thread INFO  GoogleMapsJavaBridge - [JavaBridge] - syncMapTypeToWeb() = terrain
+ 15:31:17,505 - JavaFX Application Thread INFO  GoogleMapsJavaBridge - [JavaBridge] - map type id = terrain
+ 15:31:17,505 - JavaFX Application Thread INFO  GoogleMapsJavaBridge - type terrain 
+ 15:31:17,511 - JavaFX Application Thread INFO  GoogleMapsJavaBridge - config type terrain 
+ 15:31:18,128 - JavaFX Application Thread DEBUG ApplicationState - ApplicationState::commitChanges()
+ 15:31:18,128 - JavaFX Application Thread INFO  Mission - updateMissionConfig() called with identical MissionConfig
+ 15:31:18,128 - JavaFX Application Thread DEBUG FlightPlannerController - Handling mission config update in FlightPlannerController
+ 15:31:18,128 - JavaFX Application Thread DEBUG FlightPlannerRegion - Handling mission config update in FlightPlannerRegion
+ 15:31:18,128 - JavaFX Application Thread DEBUG SensorsSummaryRegion - Handling mission config update in SensorSummaryRegion
+ 15:31:18,128 - JavaFX Application Thread DEBUG SensorsSummaryRegion - resetLabels()
+ 15:31:18,129 - JavaFX Application Thread DEBUG SensorsSummaryRegion - Sensor count: 2 
+ 15:31:18,130 - JavaFX Application Thread DEBUG GoogleMapsJavaBridge - Handling mission config update in GoogleMapsJavaBridge
+ 15:31:18,130 - JavaFX Application Thread DEBUG GoogleMapsJavaBridge - [JavaBridge] - syncMissionFromJava()
+ 15:31:18,130 - JavaFX Application Thread INFO  GoogleMapsJavaBridge - [JavaBridge] - pauseWaypointsSync()
+ 15:31:18,134 - JavaFX Application Thread DEBUG GoogleMapsJavaBridge - [JavaBridge] - SurveyMode: BOUNDED
+ 15:31:18,134 - JavaFX Application Thread INFO  GoogleMapsJavaBridge - [JavaBridge] - resumeWaypointsSync()
+ 15:31:18,134 - JavaFX Application Thread INFO  GoogleMapsJavaBridge - sync type terrain 
+ 15:31:18,135 - JavaFX Application Thread INFO  GoogleMapsJavaBridge - [JavaBridge] - syncMapTypeToWeb() = terrain
+ 15:31:18,135 - JavaFX Application Thread INFO  GoogleMapsJavaBridge - [JavaBridge] - map type id = terrain
+ 15:31:18,136 - JavaFX Application Thread INFO  GoogleMapsJavaBridge - type terrain 
+ 15:31:18,140 - JavaFX Application Thread INFO  GoogleMapsJavaBridge - config type terrain 
+ 15:31:18,915 - JavaFX Application Thread DEBUG ApplicationState - ApplicationState::commitChanges()
+ 15:31:18,915 - JavaFX Application Thread INFO  Mission - updateMissionConfig()
+ 15:31:18,947 - JavaFX Application Thread DEBUG FlightPlannerController - Handling mission config update in FlightPlannerController
+ 15:31:18,947 - JavaFX Application Thread DEBUG FlightPlannerRegion - Handling mission config update in FlightPlannerRegion
+ 15:31:18,947 - JavaFX Application Thread DEBUG SensorsSummaryRegion - Handling mission config update in SensorSummaryRegion
+ 15:31:18,947 - JavaFX Application Thread DEBUG SensorsSummaryRegion - resetLabels()
+ 15:31:18,948 - JavaFX Application Thread DEBUG SensorsSummaryRegion - Sensor count: 2 
+ 15:31:18,949 - JavaFX Application Thread DEBUG GoogleMapsJavaBridge - Handling mission config update in GoogleMapsJavaBridge
+ 15:31:18,971 - JavaFX Application Thread DEBUG GoogleMapsJavaBridge - [JavaBridge] - syncMissionFromJava()
+ 15:31:18,971 - JavaFX Application Thread INFO  GoogleMapsJavaBridge - [JavaBridge] - pauseWaypointsSync()
+ 15:31:18,989 - JavaFX Application Thread DEBUG GoogleMapsJavaBridge - [JavaBridge] - SurveyMode: BOUNDED
+ 15:31:18,989 - JavaFX Application Thread INFO  GoogleMapsJavaBridge - [JavaBridge] - resumeWaypointsSync()
+ 15:31:18,990 - JavaFX Application Thread INFO  GoogleMapsJavaBridge - sync type terrain 
+ 15:31:18,990 - JavaFX Application Thread INFO  GoogleMapsJavaBridge - [JavaBridge] - syncMapTypeToWeb() = terrain
+ 15:31:18,991 - JavaFX Application Thread INFO  GoogleMapsJavaBridge - [JavaBridge] - map type id = terrain
+ 15:31:18,991 - JavaFX Application Thread INFO  GoogleMapsJavaBridge - type terrain 
+ 15:31:18,997 - JavaFX Application Thread INFO  GoogleMapsJavaBridge - config type terrain 
+ 15:31:20,418 - JavaFX Application Thread DEBUG ApplicationState - ApplicationState::commitChanges()
+ 15:31:20,418 - JavaFX Application Thread INFO  Mission - updateMissionConfig()
+ 15:31:20,445 - JavaFX Application Thread DEBUG FlightPlannerController - Handling mission config update in FlightPlannerController
+ 15:31:20,445 - JavaFX Application Thread DEBUG FlightPlannerRegion - Handling mission config update in FlightPlannerRegion
+ 15:31:20,445 - JavaFX Application Thread DEBUG SensorsSummaryRegion - Handling mission config update in SensorSummaryRegion
+ 15:31:20,445 - JavaFX Application Thread DEBUG SensorsSummaryRegion - resetLabels()
+ 15:31:20,446 - JavaFX Application Thread DEBUG SensorsSummaryRegion - Sensor count: 2 
+ 15:31:20,447 - JavaFX Application Thread DEBUG GoogleMapsJavaBridge - Handling mission config update in GoogleMapsJavaBridge
+ 15:31:20,467 - JavaFX Application Thread DEBUG GoogleMapsJavaBridge - [JavaBridge] - syncMissionFromJava()
+ 15:31:20,467 - JavaFX Application Thread INFO  GoogleMapsJavaBridge - [JavaBridge] - pauseWaypointsSync()
+ 15:31:20,500 - JavaFX Application Thread DEBUG GoogleMapsJavaBridge - [JavaBridge] - SurveyMode: BOUNDED
+ 15:31:20,501 - JavaFX Application Thread INFO  GoogleMapsJavaBridge - [JavaBridge] - resumeWaypointsSync()
+ 15:31:20,501 - JavaFX Application Thread INFO  GoogleMapsJavaBridge - sync type terrain 
+ 15:31:20,501 - JavaFX Application Thread INFO  GoogleMapsJavaBridge - [JavaBridge] - syncMapTypeToWeb() = terrain
+ 15:31:20,502 - JavaFX Application Thread INFO  GoogleMapsJavaBridge - [JavaBridge] - map type id = terrain
+ 15:31:20,503 - JavaFX Application Thread INFO  GoogleMapsJavaBridge - type terrain 
+ 15:31:20,510 - JavaFX Application Thread INFO  GoogleMapsJavaBridge - config type terrain 
+ 15:31:22,362 - JavaFX Application Thread DEBUG ApplicationState - ApplicationState::commitChanges()
+ 15:31:22,363 - JavaFX Application Thread INFO  Mission - updateMissionConfig()
+ 15:31:22,405 - JavaFX Application Thread DEBUG FlightPlannerController - Handling mission config update in FlightPlannerController
+ 15:31:22,405 - JavaFX Application Thread DEBUG FlightPlannerRegion - Handling mission config update in FlightPlannerRegion
+ 15:31:22,406 - JavaFX Application Thread DEBUG SensorsSummaryRegion - Handling mission config update in SensorSummaryRegion
+ 15:31:22,406 - JavaFX Application Thread DEBUG SensorsSummaryRegion - resetLabels()
+ 15:31:22,406 - JavaFX Application Thread DEBUG SensorsSummaryRegion - Sensor count: 2 
+ 15:31:22,408 - JavaFX Application Thread DEBUG GoogleMapsJavaBridge - Handling mission config update in GoogleMapsJavaBridge
+ 15:31:22,444 - JavaFX Application Thread DEBUG GoogleMapsJavaBridge - [JavaBridge] - syncMissionFromJava()
+ 15:31:22,444 - JavaFX Application Thread INFO  GoogleMapsJavaBridge - [JavaBridge] - pauseWaypointsSync()
+ 15:31:22,468 - JavaFX Application Thread DEBUG GoogleMapsJavaBridge - [JavaBridge] - SurveyMode: BOUNDED
+ 15:31:22,468 - JavaFX Application Thread INFO  GoogleMapsJavaBridge - [JavaBridge] - resumeWaypointsSync()
+ 15:31:22,468 - JavaFX Application Thread INFO  GoogleMapsJavaBridge - sync type terrain 
+ 15:31:22,468 - JavaFX Application Thread INFO  GoogleMapsJavaBridge - [JavaBridge] - syncMapTypeToWeb() = terrain
+ 15:31:22,470 - JavaFX Application Thread INFO  GoogleMapsJavaBridge - [JavaBridge] - map type id = terrain
+ 15:31:22,470 - JavaFX Application Thread INFO  GoogleMapsJavaBridge - type terrain 
+ 15:31:22,476 - JavaFX Application Thread INFO  GoogleMapsJavaBridge - config type terrain 
+ 15:31:37,123 - JavaFX Application Thread DEBUG FlightPlannerRegion - Handling selected waypoint update in FlightPlannerRegion
+ 15:31:37,123 - JavaFX Application Thread DEBUG GoogleMapsJavaBridge - Handling selected waypoint update in GoogleMapsJavaBridge
+ 15:31:37,126 - JavaFX Application Thread INFO  GoogleMapsJavaBridge - mark point lat 33.43144133557529 and Lng -107.05078125 
+ 15:31:42,915 - JavaFX Application Thread DEBUG ApplicationState - ApplicationState::commitChanges()
+ 15:31:42,915 - JavaFX Application Thread INFO  Mission - updateMissionConfig()
+ 15:31:42,937 - JavaFX Application Thread DEBUG FlightPlannerController - Handling mission config update in FlightPlannerController
+ 15:31:42,937 - JavaFX Application Thread DEBUG FlightPlannerRegion - Handling mission config update in FlightPlannerRegion
+ 15:31:42,937 - JavaFX Application Thread DEBUG SensorsSummaryRegion - Handling mission config update in SensorSummaryRegion
+ 15:31:42,937 - JavaFX Application Thread DEBUG SensorsSummaryRegion - resetLabels()
+ 15:31:42,938 - JavaFX Application Thread DEBUG SensorsSummaryRegion - Sensor count: 2 
+ 15:31:42,938 - JavaFX Application Thread DEBUG GoogleMapsJavaBridge - Handling mission config update in GoogleMapsJavaBridge
+ 15:31:42,957 - JavaFX Application Thread DEBUG GoogleMapsJavaBridge - [JavaBridge] - syncMissionFromJava()
+ 15:31:42,958 - JavaFX Application Thread INFO  GoogleMapsJavaBridge - [JavaBridge] - pauseWaypointsSync()
+ 15:31:42,998 - JavaFX Application Thread DEBUG GoogleMapsJavaBridge - [JavaBridge] - SurveyMode: BOUNDED
+ 15:31:42,999 - JavaFX Application Thread INFO  GoogleMapsJavaBridge - [JavaBridge] - resumeWaypointsSync()
+ 15:31:42,999 - JavaFX Application Thread INFO  GoogleMapsJavaBridge - sync type terrain 
+ 15:31:42,999 - JavaFX Application Thread INFO  GoogleMapsJavaBridge - [JavaBridge] - syncMapTypeToWeb() = terrain
+ 15:31:43,000 - JavaFX Application Thread INFO  GoogleMapsJavaBridge - [JavaBridge] - map type id = terrain
+ 15:31:43,000 - JavaFX Application Thread INFO  GoogleMapsJavaBridge - type terrain 
+ 15:31:43,003 - JavaFX Application Thread INFO  GoogleMapsJavaBridge - config type terrain 

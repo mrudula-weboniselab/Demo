@@ -1,0 +1,65 @@
+<!DOCTYPE html >
+<html>
+<head>
+
+    <meta charset='UTF-8'/>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge' />
+    <meta name='robots' content='index'/>
+
+
+
+
+    <script>
+  window.mapbox_api = 'https://www.mapbox.com/core';
+  window.mapbox_tileApi = 'https://api.tiles.mapbox.com';
+  window.mapbox_accessToken = '' || 'pk.eyJ1IjoibWFwYm94IiwiYSI6IlhHVkZmaW8ifQ.hAMX5hSW-QnTeRCMAy9A8Q'
+  if (L.mapbox.VERSION[0] === '2') {
+      L.mapbox.accessToken = window.mapbox_accessToken;
+      L.mapbox.config.FORCE_HTTPS = true;
+      L.mapbox.config.HTTPS_URL = window.mapbox_tileApi + '/v4';
+  }
+  </script>
+    <script src='https://mapbox.com/base.js/dist/base.js'></script>
+
+
+</head>
+<body>
+
+
+
+    <div class='contain margin3 col9'>
+         <div class='col12 round keyline-all clearfix contain fill-white'>
+            <div class='clearfix'>
+
+                <div class='contain row10 fill-light'>
+                    <iframe id='demo' class='row10 col12' allowfullscreen='true' mozallowfullscreen='true' webkitallowfullscreen='true'></iframe>
+                    <script>
+        var doc = $('#demo')[0].contentWindow.document;
+
+        var jsURL = 'https://api.tiles.mapbox.com/mapbox.js/v2.1.4/mapbox.js',
+            cssURL = 'https://api.tiles.mapbox.com/mapbox.js/v2.1.4/mapbox.css';
+
+        var exampleCSS = 'body { margin:0; padding:0; }\n#map { position:absolute; top:0; bottom:0; width:100%; }';
+        var exampleCONTENT = "<link href='https://api.tiles.mapbox.com/mapbox.js/plugins/leaflet-draw/v0.2.2/leaflet.draw.css' rel='stylesheet' />\n<script src='https://api.tiles.mapbox.com/mapbox.js/plugins/leaflet-draw/v0.2.2/leaflet.draw.js'><\/script>\n<script src='https://api.tiles.mapbox.com/mapbox.js/plugins/leaflet-geodesy/v0.1.0/leaflet-geodesy.js'><\/script>\n\n<div id='map'><\/div>\n\n<script>\nvar map = L.mapbox.map('map', 'examples.map-i86nkdio')\n    .setView([38.89399, -77.03659], 17);\n\nvar featureGroup = L.featureGroup().addTo(map);\n\nvar drawControl = new L.Control.Draw({\n  edit: {\n    featureGroup: featureGroup\n  },\n  draw: {\n    polygon: true,\n    polyline: false,\n    rectangle: false,\n    circle: false,\n    marker: false\n  }\n}).addTo(map);\n\nmap.on('draw:created', showPolygonArea);\nmap.on('draw:edited', showPolygonAreaEdited);\n\nfunction showPolygonAreaEdited(e) {\n  e.layers.eachLayer(function(layer) {\n    showPolygonArea({ layer: layer });\n  });\n}\nfunction showPolygonArea(e) {\n  featureGroup.clearLayers();\n  featureGroup.addLayer(e.layer);\n  e.layer.bindPopup((LGeo.area(e.layer) / 1000000).toFixed(2) + ' km<sup>2<\/sup>');\n  e.layer.openPopup();\n}\n<\/script>\n";
+
+        // Don't combine the writes below, it breaks in IE9.
+        doc.open();
+
+
+        doc.write("<script src='" + jsURL + "'><\/script>");
+        doc.write("<link href='" + cssURL + "' rel='stylesheet' />");
+        doc.write("<style>" + exampleCSS + "</style>");
+        doc.write("<script>" +
+                      "L.mapbox.accessToken = '" + App.accessToken + "';" +
+                      "L.mapbox.config.FORCE_HTTPS = true;" +
+                      "L.mapbox.config.HTTPS_URL = 'https://api.tiles.mapbox.com/v4';" +
+                  "<\/script>");
+
+        doc.write(exampleCONTENT);
+
+        doc.close();
+
+    </script>
+
+</body>
+</html>

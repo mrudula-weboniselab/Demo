@@ -1,0 +1,97 @@
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.geometry.Insets?>
+<?import com.boundmap.javafx.controls.AdvancedTextField?>
+
+<fx:root type="javafx.scene.layout.VBox" xmlns:fx="http://javafx.com/fxml">
+    <!--This is start of the middle main container-->
+    <VBox styleClass="bgContainerMiddle">
+        <padding>
+            <Insets top="25" right="15" bottom="30" left="15"></Insets>
+        </padding>
+        <HBox>
+            <VBox fx:id="flightPlanType" prefHeight="20" styleClass="textNormal"
+                  spacing="10"
+                  prefWidth="100">
+                <VBox.margin>
+                    <Insets top="15" right="0" bottom="0" left="0"></Insets>
+                </VBox.margin>
+                <Label fx:id="labelPlanType" text="PLAN TYPE" styleClass="textBold"/>
+
+            </VBox>
+            <VBox prefWidth="400">
+                <HBox id="HBox" fx:id="resulationButtonBox"
+                      layoutX="4.0"
+                      layoutY="182.0"
+                      minWidth="-Infinity"
+                      prefWidth="305"
+                      spacing="5.0">
+                    <padding>
+                        <Insets top="00" right="0" bottom="0" left="120"/>
+                    </padding>
+
+                </HBox>
+                <!--End of Ground Resolution button Box-->
+
+                <HBox fx:id="waypointsAdditionControls" alignment="CENTER" spacing="5.0">
+                    <padding>
+                        <Insets bottom="0.0" top="10.0" left="123.0"/>
+                    </padding>
+                    <VBox>
+                        <HBox>
+                            <HBox prefWidth="50" minWidth="15">
+                                <Label fx:id="labelSliderMinValue" text="0cm"
+                                       styleClass="textSmall"
+                                       alignment="CENTER_LEFT"/>
+                            </HBox>
+                            <HBox>
+                                <padding>
+                                    <Insets top="0" right="0" bottom="0"
+                                            left="200"></Insets>
+                                </padding>
+                                <Label fx:id="labelSliderMaxValue"
+                                       text="30cm"
+                                       styleClass="textSmall"
+                                       prefWidth="50"
+                                       minWidth="15"
+                                       alignment="CENTER_RIGHT"/>
+                            </HBox>
+                        </HBox>
+                        <Slider fx:id="altitudeSlider" minHeight="20" minWidth="-Infinity"
+                                prefWidth="300.0">
+                            <VBox.margin>
+                                <Insets bottom="5.0" top="0.0" left="00"/>
+                            </VBox.margin>
+                        </Slider>
+                        <HBox fx:id="sliderText">
+                            <Label fx:id="labelSliderValue" text="30cm"
+                                   styleClass="textSmallRed"
+                                   prefWidth="50" minWidth="15"/>
+                        </HBox>
+                    </VBox>
+                </HBox>
+            </VBox>
+        </HBox>
+        <HBox prefHeight="40" spacing="6.0">
+            <padding>
+                <Insets top="15" right="0" bottom="5" left="0"/>
+            </padding>
+            <AdvancedTextField fx:id="textFieldAddWaypointLatitude"
+                               restrict="^-?[0-9]*\.?[0-9]*"
+                               promptText="Latitude"
+                               prefColumnCount="13"
+                               minWidth="50"
+                               prefWidth="165"/>
+            <AdvancedTextField fx:id="textFieldAddWaypointLongitude"
+                               restrict="^-?[0-9]*\.?[0-9]*"
+                               promptText="Longitude"
+                               prefColumnCount="13"
+                               minWidth="50"
+                               prefWidth="150"/>
+
+        </HBox>
+        <TableView fx:id="tableViewWayPoints"/>
+        <VBox alignment="CENTER" layoutX="4.0" layoutY="321.0" spacing="5.0"/>
+    </VBox>
+</fx:root>

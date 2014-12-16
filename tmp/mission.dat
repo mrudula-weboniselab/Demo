@@ -1,0 +1,216 @@
+
+
+FlightPlannerVersion 2.0
+# Mission configuration file.
+# lines starting with a '#' are comment lines and are ignored
+# The following commands are available:
+
+#----------------------------------------------
+#----------------------------------------------
+#	Initial Configuration
+#----------------------------------------------
+#----------------------------------------------
+
+#HomeTestDistance
+# This is the threshold distance between the determined home position and the
+# current vehicle position that determines whether the home is OK.
+# Default is 5.0m
+# Units: metres
+HomeTestDistance 5.0
+
+#NumWindTestCircles int_numreps
+# This is the number of circles to fly at the takeoff rally point in order
+# to get a decent determination of the wind direction.
+# This information is then used if the waypoints are to be used as a bounding box
+# and the aircraft will be generating its own flight path.
+# Units: Scalar - number of circles
+NumWindTestCircles 2
+
+#MinimumBatteryLevel float_v
+# This is the minimum voltage the system is allowed to read on the main flight pack
+# before commencing a landing.
+# If this is set too low, the AP's own failsafes will likely kick in first.
+# Units: Volts
+MinimumBatteryLevel 10.6
+
+#----------------------------------------------
+#----------------------------------------------
+#	Launch Configuration
+#----------------------------------------------
+#----------------------------------------------
+
+#Takeoff_to_NavAlt float_alt
+# The altitude at which the aircraft transitions from takeoff mode to survey mode
+# if the system is using the included waypoints directly.
+# If the waypoints are being used as a bounding box, the transition happens after
+# several loiter circles (specified by NumWindTestCircles) at the takeoff rally point and altitude
+# Units: metres above launch
+#Takeoff_to_NavAlt 50
+
+# Fixed_TO_Rally
+# If this flag is set, the system will use the takeoff rally point below.
+# Otherwise, it will be set to home.
+# Units: scalar flag
+Fixed_TO_Rally 0
+
+#Takeoff_Rally float_lat float_lon
+# The position of the rally point the aircraft moves to following takeoff.
+# The default is the home position calculated on startup.
+# Units: Lat Lon in decimal degrees
+Takeoff_Rally 43.111573 -79.297302
+
+#Takeoff_Airspeed float_airspeed
+# The target airspeed of the aircraft during takeoff as it approaches and hits the
+# takeoff rally point.
+# Units: m/s relative airspeed.
+Takeoff_Airspeed 12.0
+
+#Takeoff_Radius float_Takeoff_Radius
+#Takeoff_Alt float_Takeoff_Alt
+#Home_Alt float_Home_Alt
+#Home_Position float_Takeoff_Alt
+
+#ImmediateLaunch int_flag
+# This flag is used to set whether the aircraft will immediately launch once it has
+# completed its startup and configuration steps.
+# Caution should be used if the aircraft is set to launch automatically.
+# Setting this to a non-zero number will put the aircraft in takeoff mode automatically.
+# Units: scalar flag
+ImmediateLaunch 1
+
+
+#----------------------------------------------
+#----------------------------------------------
+#	Landing Configuration
+#----------------------------------------------
+#----------------------------------------------
+
+#LandApproachLength float_distance
+# The distance from the target land point to the rally point.
+# The default is 200m.
+LandApproachLength 200
+
+#LandAtHome int_flag
+# this variable dictates whether the aircraft will land at the position where it was homed or not.
+# If not, the landing point is pulled from this file.
+# Units: scalar flag
+LandAtHome 1
+
+#LandApproachSpeed float_speed
+# The speed of the aircraft as it enters its landing pattern, including the rally segment.
+# Units: metres/second relative airspeed
+LandApproachSpeed 12.0
+
+#LandFlareSpeed float_speed
+# The relative airspeed of the final approach.
+# Units: metres/second relative airspeed
+LandFlareSpeed 8.0
+
+#LandRallyRadius float_radius
+# The radius of the LandRally point.
+# Units: metres
+LandRallyRadius 30.0
+
+#LandDescentRate float_rate
+# The rate at which the aircraft bleeds altitude while in the landing rally.
+# Units: metres/second
+#LandDescentRate 7.0
+
+#LandFlareAlt float_m
+# The height above launch at which the aircraft goes into flare.
+# Typically, this shuts the motor off and goes into a slight nose-up
+# configuration.
+# Units: metres
+LandFlareAlt 3.0
+#LandingProgram float_minwindangle float_maxwindangle int_landathome int_calcrally float_landlat float_landlon float_rallylat float_rallylon
+# Landing program data point.
+# If the wind estimate from the AP falls within the bounds [minwindangle maxwindangle] (radians) the rest of the
+# information will be used.
+# landathome: Will the aircraft land at the point it was initialised? If not, use (landlat, landlon)
+#	if so (landlat,landlon) is not used
+# calcrally: Will the aircraft compute an appropriate landing rally point? If not, rally at (rallylat, rallylon)
+#	if so (rallylat,rallylon) is not used
+#
+# This information will be processed when the landing is executed. The previous landing parameters are used at startup.
+# As many of these programs can be provided as desired. The landing algorithm will pick the first one with a wind dir match.
+#
+# These elements can be generated using the LandProg.exe file which creates a file called landprog.dat. Copy those elements to this file.
+
+#Default Landing
+LandingProgram 0.0 7.3 1 1 43.111573 -79.297302 0.0 0.0
+
+#--------------->----------------------------
+#----------------------------------------------
+#	Survey Configuration
+#----------------------------------------------
+#----------------------------------------------
+
+#AltMode flag
+# Can be one of:
+# ComputedAltitude (based on GroundRes)
+# SelectedAlt (use altitudes from waypoints or SureyAlt below)
+AltMode ComputedAltitude
+
+#SurveyAlt Alt
+# The flight altitude used during the survey
+# The altitude is in metres above launch altitude
+# Units: m above launch
+SurveyAlt 100.0
+
+#GroundRes Res
+# This will be used by the plane to select an altitude to fly for bounded surveys if selected to do so
+# Given in cm per pixel
+GroundRes 5.0
+
+#CaptureOverlap Fraction
+# How much overlap do we need (in longitudional and lateral sides)
+# This is a fraction of image. It is used to determine appropriate transect width.
+# Units: scaler (0.x)
+CaptureOverlapAlongTransect 0.6
+CaptureOverlapBetweenTransects 0.6
+
+#SurveyAirSpeed airspeed
+# The relative airspeed flown during the survey.
+# Units: m/s relative airspeed
+SurveyAirSpeed 12
+
+#SurveyRepetitions int_flag
+# The number of times to repeat the survey flight (battery life permitting).
+# if this value is set negative, the plane will continue to fly the survey continuously.
+# Units: scalar - number of repetitions
+SurveyRepetitions 1
+
+#SurveyMode - this is new, will be incorporated
+# What type of survey to fly.
+# Can be one of:
+# BOX - plane assume a square box with the length specified below by "BoxSideLength"  - Can be moved in the field
+# BOUNDED - plane uses given GPS coordinates as vertices of a bounded area
+# LINEAR - plane will fly through given GPS coordinates in order
+SurveyMode BOUNDED
+
+#BoxSideLength float_len
+# This variable dictates the length of one side of the box survey in metres. If
+# a box survey is not flown (BoxSurvey 0) this value is not used.
+# default length is 300m.
+# Units: m above launch
+BoxSideLength 100
+
+#WP Lat Lon
+# A waypoint. As many of these can be entered as desired.
+# These can be either a series of waypoints for the flight plan
+# or they can be the bounding box for a flight plan calculated later.
+# The order entered is the order flown (if a linear flight).
+# Units: Lat Lon in decimal degrees
+#WP 43.825252 -79.399952
+# -- OR
+#WPA 43.825252 -79.399952 100 (if an altitude is desired for each. The alt is overriden in box or bounded surveys by SurveyAlt var)
+    
+WPA 43.111573 -79.297302 100.0
+WPA 44.111573 -78.297302 150.0
+WPA 45.111573 -77.297302 200.0
+WPA 46.111573 -76.297302 250.0
+
+ExclusionWP 1 43.111111 -79.111111
+ExclusionWP 1 43.222222 -79.222222
+ExclusionWP 2 53.111111 -89.111111
+ExclusionWP 2 53.222222 -89.222222

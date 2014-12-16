@@ -1,0 +1,34 @@
+<?import javafx.scene.layout.HBox?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Hyperlink?>
+<?import javafx.scene.web.WebView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.control.Label?>
+<fx:root type="javafx.scene.layout.VBox"
+         fx:id="googleMapsRegion"
+         stylesheets="/styles/flight_planner.css"
+         xmlns:fx="http://javafx.com/fxml">
+    <HBox minHeight="48" prefHeight="48" maxHeight="48" alignment="CENTER_RIGHT" styleClass="midHeader">
+        <padding>
+            <Insets right="30"/>
+        </padding>
+        <Hyperlink fx:id="flightPlanSummaryLink" text="Flight Plan Summary" onAction="#toggleFlightSummaryPanel"
+                   styleClass="headerLinks,labelRedLarge" alignment="CENTER_RIGHT"/>
+    </HBox>
+    <VBox fx:id="map">
+        <WebView fx:id="webView" />
+    </VBox>
+    <!--Below VBox will appear when there is no internet connection available-->
+    <VBox fx:id="noNetConnection" visible="false">
+        <VBox.margin>
+            <Insets top="-400.0"></Insets>
+        </VBox.margin>
+        <VBox spacing="15" styleClass="" prefWidth="200" prefHeight="200" alignment="BASELINE_CENTER">
+            <Label styleClass="exclamation" prefHeight="35" minHeight="32" prefWidth="35"></Label>
+            <Label styleClass="noConnectionText" text="To see the Maps view you must be connected"></Label>
+            <Label styleClass="noConnectionText" text="to the internet"></Label>
+        </VBox>
+    </VBox>
+
+</fx:root>

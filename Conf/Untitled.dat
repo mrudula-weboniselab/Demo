@@ -1,0 +1,156 @@
+
+
+# Mission configuration file.
+# lines starting with a '#' are comment lines and are ignored
+# The following commands are available:
+
+#----------------------------------------------
+#----------------------------------------------
+#	Initial Configuration
+#----------------------------------------------
+#----------------------------------------------
+
+#HomeTestDistance
+# This is the threshold distance between the determined home position and the
+# current vehicle position that determines whether the home is OK.
+# Default is 5.0m
+# Units: metres
+#HomeTestDistance 5
+
+#NumWindTestCircles int_numreps
+# This is the number of circles to fly at the takeoff rally point in order
+# to get a decent determination of the wind direction.
+# This information is then used if the waypoints are to be used as a bounding box
+# and the aircraft will be generating its own flight path.
+# Units: Scalar - number of circles
+NumWindTestCircles 2
+
+#MinimumBatteryLevel float_v
+# This is the minimum voltage the system is allowed to read on the main flight pack
+# before commencing a landing.
+# If this is set too low, the AP's own failsafes will likely kick in first.
+# Units: Volts
+#MinimumBatteryLevel 10.6
+
+#----------------------------------------------
+#----------------------------------------------
+#	Launch Configuration
+#----------------------------------------------
+#----------------------------------------------
+
+#Takeoff_to_NavAlt float_alt
+# The altitude at which the aircraft transitions from takeoff mode to survey mode
+# if the system is using the included waypoints directly.
+# If the waypoints are being used as a bounding box, the transition happens after
+# several loiter circles (specified by NumWindTestCircles) at the takeoff rally point and altitude
+# Units: metres above launch
+#Takeoff_to_NavAlt 50
+
+# Fixed_TO_Rally
+# If this flag is set, the system will use the takeoff rally point below.
+# Otherwise, it will be set to home.
+# Units: scalar flag
+Fixed_TO_Rally 0
+
+#Takeoff_Rally float_lat float_lon
+# The position of the rally point the aircraft moves to following takeoff.
+# The default is the home position calculated on startup.
+# Units: Lat Lon in decimal degrees
+Takeoff_Rally 43.111573 -79.297302
+
+#Takeoff_Airspeed float_airspeed
+# The target airspeed of the aircraft during takeoff as it approaches and hits the
+# takeoff rally point.
+# Units: m/s relative airspeed.
+Takeoff_Airspeed 12
+
+#Takeoff_Radius float_Takeoff_Radius
+#Takeoff_Alt float_Takeoff_Alt
+#Home_Alt float_Home_Alt
+#Home_Position float_Takeoff_Alt
+
+#ImmediateLaunch int_flag
+# This flag is used to set whether the aircraft will immediately launch once it has
+# completed its startup and configuration steps.
+# Caution should be used if the aircraft is set to launch automatically.
+# Setting this to a non-zero number will put the aircraft in takeoff mode automatically.
+# Units: scalar flag
+ImmediateLaunch 1
+
+
+#----------------------------------------------
+#----------------------------------------------
+#	Landing Configuration
+#----------------------------------------------
+#----------------------------------------------
+
+#LandApproachLength float_distance
+# The distance from the target land point to the rally point.
+# The default is 200m.
+LandApproachLength 0
+
+#--------------->----------------------------
+#----------------------------------------------
+#	Survey Configuration
+#----------------------------------------------
+#----------------------------------------------
+
+#AltMode flag
+# Can be one of:
+# ComputedAltitude (based on GroundRes)
+# SelectedAlt (use altitudes from waypoints or SureyAlt below)
+AltMode ComputedAltitude
+
+#SurveyAlt Alt
+# The flight altitude used during the survey
+# The altitude is in metres above launch altitude
+# Units: m above launch
+SurveyAlt 80
+
+#GroundRes Res
+# This will be used by the plane to select an altitude to fly for bounded surveys if selected to do so
+# Given in cm per pixel
+GroundRes 16
+
+#CaptureOverlap Fraction
+# How much overlap do we need (in longitudional and lateral sides)
+# This is a fraction of image. It is used to determine appropriate transect width.
+# Units: scaler (0.x)
+CaptureOverlapAlongTransect 0.0
+CaptureOverlapBetweenTransects 0.0
+
+#SurveyAirSpeed airspeed
+# The relative airspeed flown during the survey.
+# Units: m/s relative airspeed
+SurveyAirSpeed 0
+
+#SurveyRepetitions int_flag
+# The number of times to repeat the survey flight (battery life permitting).
+# if this value is set negative, the plane will continue to fly the survey continuously.
+# Units: scalar - number of repetitions
+SurveyRepetitions 0
+
+#SurveyMode - this is new, will be incorporated
+# What type of survey to fly.
+# Can be one of:
+# BOX - plane assume a square box with the length specified below by "BoxSideLength"  - Can be moved in the field
+# BOUNDED - plane uses given GPS coordinates as vertices of a bounded area
+# LINEAR - plane will fly through given GPS coordinates in order
+SurveyMode BOUNDED
+
+#BoxSideLength float_len
+# This variable dictates the length of one side of the box survey in metres. If
+# a box survey is not flown (BoxSurvey 0) this value is not used.
+# default length is 300m.
+# Units: m above launch
+BoxSideLength 0
+
+#WP Lat Lon
+# A waypoint. As many of these can be entered as desired.
+# These can be either a series of waypoints for the flight plan
+# or they can be the bounding box for a flight plan calculated later.
+# The order entered is the order flown (if a linear flight).
+# Units: Lat Lon in decimal degrees
+#WP 43.825252 -79.399952
+# -- OR
+#WPA 43.825252 -79.399952 100 (if an altitude is desired for each. The alt is overriden in box or bounded surveys by SurveyAlt var)

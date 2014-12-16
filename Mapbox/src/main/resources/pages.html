@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=Edge'>
+    <link href='https://api.tiles.mapbox.com/mapbox.js/v1.6.3/mapbox.css' rel='stylesheet' />
+    <link rel='stylesheet' href='css/font-awesome.min.css'>
+    <link rel='stylesheet' href='css/mplus.css'>
+    <link href='https://www.mapbox.com/css/site-ie9.css' rel='stylesheet' />
+  <!--  <link href='https://api.tiles.mapbox.com/mapbox.js/plugins/leaflet-draw/v0.2.2/leaflet.draw.css' rel='stylesheet' />
+    <script src='https://api.tiles.mapbox.com/mapbox.js/plugins/leaflet-draw/v0.2.2/leaflet.draw.js'></script>
+    <script src='https://api.tiles.mapbox.com/mapbox.js/plugins/leaflet-geodesy/v0.1.0/leaflet-geodesy.js'></script>
+ -->   <title></title>
+    <link href='https://geojson.io/lib/drow/leaflet.draw.css' rel='stylesheet'/>
+    <link href='css/leaflet.draw.css' rel='stylesheet' />
+    <link href='css/codemirror.css' rel='stylesheet' />
+    <link href='css/base.css' rel='stylesheet' />
+    <link href='css/marker.css' rel='stylesheet' />
+    <!--<link href='css/github_browse.css' rel='stylesheet' />-->
+    <link href='css/site.css' rel='stylesheet' />
+    <link href='css/theme.css' rel='stylesheet' />
+    <link rel='icon' type='image/x-icon' href='/img/favicon.png' />
+
+    <meta name='viewport' content='initial-scale=1,maximum-scale=1'>
+    <!--[if lt IE 9]>
+   <script type='text/javascript' src='js/aight.min.js'></script>
+   <script src='https://api.tiles.mapbox.com/mapbox.js/v2.1.4/mapbox.js'></script>
+    <![endif]-->
+    <script src='https://api.tiles.mapbox.com/mapbox.js/v1.6.3/mapbox.uncompressed.js'></script>
+    <script src='https://d3nslu0hdya83q.cloudfront.net/dist/1.0/raven.min.js'></script>
+    <script>
+  Raven.config('https://c2d096c944dd4150ab7e44b0881b4a46@app.getsentry.com/11480', {
+      whitelistUrls: [/geojson\.io/],
+      ignoreErrors: [
+          'Uncaught Error: Error connecting to extension ckibcdccnfeookdmbahgiakhnjcddpki',
+          'Uncaught Error: Error connecting to extension pioclpoplcdbaefihamjohnefbikjilc'
+      ]
+  }).install();
+  </script>
+    <script src="http://maps.googleapis.com/maps/api/js"></script>
+    <script>
+function initialize() {
+  var mapProp = {
+    center:new google.maps.LatLng(51.508742,-0.120850),
+    zoom:5,
+    mapTypeId:google.maps.MapTypeId.ROADMAP
+  };
+  var map=new google.maps.Map(document.getElementById("googleMap"),mapProp);
+}
+google.maps.event.addDomListener(window, 'load', initialize);
+</script>
+</head>
+<body id="geojsonio-body" class="fullscreen" dropzone="copy">
+
+<div class="geojsonio">
+    <div class="container">
+        <div class="map leaflet-container leaflet-fade-anim" tabindex="0">
+            <!--<div class="leaflet-map-pane" style="transform: translate(629px, -29px);">
+                <div class="leaflet-tile-pane">
+                    <div class="leaflet-layer">
+                        <div class="leaflet-tile-container" style="transform: translate(-228px, 168.5px) scale(0.5);"></div>
+                        <div class="leaflet-tile-container" style=""></div>
+                    </div>
+                    <div class="leaflet-layer">
+                        <div class="leaflet-tile-container"></div>
+
+                        <div class="leaflet-tile-container leaflet-zoom-animated">
+                            <div id='map'></div>
+                     &lt;!&ndash;  <img class="leaflet-tile leaflet-tile-loaded" style="height: 256px; width: 256px; transform: translate(-227px, 189px);" src="http://b.tiles.mapbox.com/v3/tmcw.map-j5fsp01s/3/6/3.png"></img>
+                            <img class="leaflet-tile leaflet-tile-loaded" style="height: 256px; width: 256px; transform: translate(-227px, -67px);" src="http://a.tiles.mapbox.com/v3/tmcw.map-j5fsp01s/3/6/2.png"></img>
+                            <img class="leaflet-tile leaflet-tile-loaded" style="height: 256px; width: 256px; transform: translate(-483px, 189px);" src="http://a.tiles.mapbox.com/v3/tmcw.map-j5fsp01s/3/5/3.png"></img>
+                            <img class="leaflet-tile leaflet-tile-loaded" style="height: 256px; width: 256px; transform: translate(29px, 189px);" src="http://a.tiles.mapbox.com/v3/tmcw.map-j5fsp01s/3/7/3.png"></img>
+                            <img class="leaflet-tile leaflet-tile-loaded" style="height: 256px; width: 256px; transform: translate(-227px, 445px);" src="http://a.tiles.mapbox.com/v3/tmcw.map-j5fsp01s/3/6/4.png"></img>
+                            <img class="leaflet-tile leaflet-tile-loaded" style="height: 256px; width: 256px; transform: translate(-483px, -67px);" src="http://b.tiles.mapbox.com/v3/tmcw.map-j5fsp01s/3/5/2.png"></img>
+                            <img class="leaflet-tile leaflet-tile-loaded" style="height: 256px; width: 256px; transform: translate(29px, -67px);" src="http://b.tiles.mapbox.com/v3/tmcw.map-j5fsp01s/3/7/2.png"></img>
+                            <img class="leaflet-tile leaflet-tile-loaded" style="height: 256px; width: 256px; transform: translate(-483px, 445px);" src="http://b.tiles.mapbox.com/v3/tmcw.map-j5fsp01s/3/5/4.png"></img>
+                            <img class="leaflet-tile leaflet-tile-loaded" style="height: 256px; width: 256px; transform: translate(29px, 445px);" src="http://b.tiles.mapbox.com/v3/tmcw.map-j5fsp01s/3/7/4.png"></img>
+                            <img class="leaflet-tile leaflet-tile-loaded" style="height: 256px; width: 256px; transform: translate(-739px, 189px);" src="http://b.tiles.mapbox.com/v3/tmcw.map-j5fsp01s/3/4/3.png"></img>
+                            <img class="leaflet-tile leaflet-tile-loaded" style="height: 256px; width: 256px; transform: translate(285px, 189px);" src="http://b.tiles.mapbox.com/v3/tmcw.map-j5fsp01s/3/0/3.png"></img>
+                            <img class="leaflet-tile leaflet-tile-loaded" style="height: 256px; width: 256px; transform: translate(-739px, -67px);" src="http://a.tiles.mapbox.com/v3/tmcw.map-j5fsp01s/3/4/2.png"></img>
+                            <img class="leaflet-tile leaflet-tile-loaded" style="height: 256px; width: 256px; transform: translate(285px, -67px);" src="http://a.tiles.mapbox.com/v3/tmcw.map-j5fsp01s/3/0/2.png"></img>
+                            <img class="leaflet-tile leaflet-tile-loaded" style="height: 256px; width: 256px; transform: translate(-739px, 445px);" src="http://a.tiles.mapbox.com/v3/tmcw.map-j5fsp01s/3/4/4.png"></img>
+                            <img class="leaflet-tile leaflet-tile-loaded" style="height: 256px; width: 256px; transform: translate(285px, 445px);" src="http://a.tiles.mapbox.com/v3/tmcw.map-j5fsp01s/3/0/4.png"></img>
+                       &ndash;&gt; </div>
+                    </div>
+                </div>
+                <div class="leaflet-objects-pane">
+                    <div class="leaflet-shadow-pane"></div>
+                    <div class="leaflet-overlay-pane">
+                        <div class="leaflet-draw-guides"></div>
+                        <svg class="leaflet-zoom-animated" style="transform: translate(-1119px, -158px);" width="1960" height="748" viewBox="-1119 -158 1960 748">
+                        </svg>
+                    </div>
+                    <div class="leaflet-marker-pane"></div>
+                    <div class="leaflet-popup-pane"></div>
+                </div>
+            </div>-->
+            <div class="leaflet-control-container">
+                <div class="leaflet-top leaflet-left"></div>
+                <div class="leaflet-top leaflet-right">
+                    <div class="leaflet-control-grid map-tooltip leaflet-control" style="display: none;">
+                        <a class="close" href="#" title="close">
+
+                            close
+
+                        </a>
+                        <div class="map-tooltip-content"></div>
+                    </div>
+                    <div class="leaflet-control-mapbox-geocoder leaflet-bar leaflet-control">
+                        <a class="leaflet-control-mapbox-geocoder-toggle mapbox-icon mapbox-icon-geocoder" href="#">
+                        </a>
+                        <div class="leaflet-control-mapbox-geocoder-results"></div>
+                        <div class="leaflet-control-mapbox-geocoder-wrap">
+                            <form class="leaflet-control-mapbox-geocoder-form">
+                                <input class="" type="text" placeholder="Search"></input>
+                            </form>
+                        </div>
+                    </div>
+                    <div class="leaflet-control-zoom leaflet-bar leaflet-control">
+                        <a class="leaflet-control-zoom-in" href="#" title="Zoom in">
+
+                            +
+
+                        </a>
+                        <a class="leaflet-control-zoom-out" href="#" title="Zoom out">
+
+                            -
+
+                        </a>
+                    </div>
+                    <div class="leaflet-draw leaflet-control">
+                        <div class="leaflet-draw-section">
+                            <div class="leaflet-draw-toolbar leaflet-bar leaflet-draw-toolbar-top">
+                                <a class="leaflet-draw-draw-polyline" href="#" title="Draw a polyline"></a>
+                                <a class="leaflet-draw-draw-polygon" href="#" title="Draw a polygon"></a>
+                                <a class="leaflet-draw-draw-rectangle" href="#" title="Draw a rectangle"></a>
+                                <a class="leaflet-draw-draw-marker" href="#" title="Draw a marker"></a>
+                            </div>
+                            <ul class="leaflet-draw-actions" style="top: 26px; display: none;">
+                                <li class="">
+                                    <a class="" href="#" title="Delete last point drawn">
+
+                                        Delete last point
+
+                                    </a>
+                                </li>
+                                <li class="">
+                                    <a class="" href="#" title="Cancel drawing">
+
+                                        Cancel
+
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="leaflet-draw-section">
+                            <div class="leaflet-draw-toolbar leaflet-bar">
+                                <a class="leaflet-draw-edit-edit leaflet-disabled" href="#" title="No layers to edit."></a>
+                                <a class="leaflet-draw-edit-remove leaflet-disabled" href="#" title="No layers to delete."></a>
+                            </div>
+                            <ul class="leaflet-draw-actions"></ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="leaflet-bottom leaflet-left"></div>
+                <div class="leaflet-draw-section">
+                    <div class="leaflet-draw-toolbar leaflet-bar">
+                        <a class="leaflet-draw-edit-edit leaflet-disabled" href="#" title="No layers to edit."></a>
+                        <a class="leaflet-draw-edit-remove leaflet-disabled" href="#" title="No layers to delete."></a>
+                    </div>
+                    <ul class="leaflet-draw-actions"></ul>
+                </div>
+            </div>
+        </div>-->
+        <!--<div class="leaflet-bottom leaflet-left"></div>-->
+
+    </div>
+    <div class="layer-switch">
+        <button class="pad0x">Mapbox</button>
+        <button class="pad0x active">Satellite</button>
+        <button class="pad0x">OSM</button>
+    </div>
+
+</div>
+
+</div>
+<div class="name">
+    <a class="icon-file-alt" target="_blank"></a>
+                <span class="filename deemphasize">unsaved</span>
+</div>
+</div>
+</div>
+
+</div>
+<script src='js/delegate.js'></script>
+<script src='js/lib.js'></script>
+<script src='js/site.js'></script>
+<script type='text/javascript'>
+  var _gauges = _gauges || [];
+  (function() {
+    var t   = document.createElement('script');
+    t.type  = 'text/javascript';
+    t.async = true;
+    t.id    = 'gauges-tracker';
+    t.setAttribute('data-site-id', '51eee846108d7b2871000081');
+    t.src = '//secure.gaug.es/track.js';
+    var s = document.getElementsByTagName('script')[0];
+    s.parentNode.insertBefore(t, s);
+  })();
+</script>
+</body>
+</html>
